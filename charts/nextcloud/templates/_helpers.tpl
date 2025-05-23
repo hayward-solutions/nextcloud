@@ -249,12 +249,10 @@ S3 as primary object store env vars
 - name: OBJECTSTORE_S3_LEGACYAUTH
   value: {{ . | quote }}
 {{- end }}
-{{- with .Values.nextcloud.objectStore.s3.verifyExists }}
-{{- end }}
-- name: OBJECTSTORE_S3_VERIFY_BUCKET_EXISTS
-  value: {{ .Values.nextcloud.objectStore.s3.verifyExists | quote }}
 - name: OBJECTSTORE_S3_AUTOCREATE
   value: {{ .Values.nextcloud.objectStore.s3.autoCreate | quote }}
+- name: OBJECTSTORE_S3_VERIFY_BUCKET_EXISTS
+  value: {{ .Values.nextcloud.objectStore.s3.verifyExists | quote }}
 - name: OBJECTSTORE_S3_REGION
   value: {{ .Values.nextcloud.objectStore.s3.region | quote }}
 - name: OBJECTSTORE_S3_PORT
