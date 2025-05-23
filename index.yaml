@@ -3,6 +3,56 @@ entries:
   nextcloud:
   - apiVersion: v2
     appVersion: 30.0.10
+    created: "2025-05-23T20:59:53.57962039Z"
+    dependencies:
+    - condition: postgresql.enabled
+      name: postgresql
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 15.5.0
+    - condition: mariadb.enabled
+      name: mariadb
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 18.2.0
+    - condition: redis.enabled
+      name: redis
+      repository: oci://registry-1.docker.io/bitnamicharts
+      version: 19.6.4
+    - alias: collabora
+      condition: collabora.enabled
+      name: collabora-online
+      repository: https://collaboraonline.github.io/online
+      version: 1.1.20
+    description: A file sharing server that puts the control and security of your
+      own data back into your hands.
+    digest: d260a7e3a6981b6f30e6e6f79e11158526349e983e334a41a4e9a9f797b7324c
+    home: https://nextcloud.com/
+    icon: https://cdn.rawgit.com/docker-library/docs/defa5ffc7123177acd60ddef6e16bddf694cc35f/nextcloud/logo.svg
+    keywords:
+    - nextcloud
+    - storage
+    - http
+    - web
+    - php
+    maintainers:
+    - email: skjnldsv@protonmail.com
+      name: skjnldsv
+    - email: christian.ingenhaag@googlemail.com
+      name: chrisingenhaag
+    - email: jeff@billimek.com
+      name: billimek
+    - name: WrenIX
+      url: https://wrenix.eu
+    - name: jessebot
+      url: https://jessebot.work
+    name: nextcloud
+    sources:
+    - https://github.com/nextcloud/helm
+    - https://github.com/nextcloud/docker
+    urls:
+    - https://github.com/hayward-solutions/nextcloud/releases/download/nextcloud-6.6.13/nextcloud-6.6.13.tgz
+    version: 6.6.13
+  - apiVersion: v2
+    appVersion: 30.0.10
     created: "2025-05-23T20:16:54.436789249Z"
     dependencies:
     - condition: postgresql.enabled
@@ -8435,4 +8485,4 @@ entries:
     urls:
     - https://github.com/nextcloud/helm/releases/download/nextcloud-2.0.2/nextcloud-2.0.2.tgz
     version: 2.0.2
-generated: "2025-05-23T20:16:54.437262793Z"
+generated: "2025-05-23T20:59:53.58006551Z"
